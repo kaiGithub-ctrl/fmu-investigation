@@ -1,6 +1,7 @@
 import fmpy
 from fmpy import plot_result
 from fmpy.util import plot_result
+from fmpy.fmi2 import FMU2Slave
 from fmpy import *
 
 
