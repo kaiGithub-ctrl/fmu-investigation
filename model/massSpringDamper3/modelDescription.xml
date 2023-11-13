@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2023-09-28T19:50:18Z" generationTool="Simulink (R2023a)" guid="{78477140-9cc7-345b-a0c4-b6827231bc68}" modelName="massSpringDamper3" numberOfEventIndicators="0" variableNamingConvention="structured" version="2.8">
+  <CoSimulation canBeInstantiatedOnlyOncePerProcess="true" canHandleVariableCommunicationStepSize="false" canNotUseMemoryManagementFunctions="true" modelIdentifier="massSpringDamper3">
+    <SourceFiles>
+      <File name="massSpringDamper3.c"/>
+      <File name="massSpringDamper3_data.c"/>
+      <File name="RTWCG_FMU_util.c"/>
+      <File name="massSpringDamper3_fmu.c"/>
+    </SourceFiles>
+  </CoSimulation>
+  <DefaultExperiment startTime="0" stepSize="0.2" stopTime="10"/>
+  <VendorAnnotations>
+    <Tool name="Simulink">
+      <Simulink>
+        <ImportCompatibility requireMATLABOnPath="no" requireRelease="all"/>
+        <SimulinkModelInterface>
+          <Inport blockPath="massSpringDamper3/Input" dataType="double" dimension="[1]" portName="Input" portNumber="1" sampleTime="[0 0]" uniquePortName="Input" unit=""/>
+          <Outport blockPath="massSpringDamper3/Output" dataType="double" dimension="[1]" portName="Output" portNumber="1" sampleTime="[0 0]" uniquePortName="Output" unit=""/>
+        </SimulinkModelInterface>
+      </Simulink>
+    </Tool>
+  </VendorAnnotations>
+  <ModelVariables>
+    <ScalarVariable causality="input" description="Input" name="Input" valueReference="0" variability="continuous">
+      <Real start="0"/>
+      <!--Index = 1-->
+    </ScalarVariable>
+    <ScalarVariable causality="output" description="Output" initial="calculated" name="Output" valueReference="1" variability="continuous">
+      <Real/>
+      <!--Index = 2-->
+    </ScalarVariable>
+    <ScalarVariable causality="independent" description="time" name="time" valueReference="2" variability="continuous">
+      <Real/>
+      <!--Index = 3-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="b" initial="exact" name="b" valueReference="3" variability="tunable">
+      <Real start="0.5"/>
+      <!--Index = 4-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="k" initial="exact" name="k" valueReference="4" variability="tunable">
+      <Real start="0.5"/>
+      <!--Index = 5-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="m" initial="exact" name="m" valueReference="5" variability="tunable">
+      <Real start="4"/>
+      <!--Index = 6-->
+    </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="2"/>
+    </Outputs>
+    <InitialUnknowns>
+      <Unknown index="2"/>
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

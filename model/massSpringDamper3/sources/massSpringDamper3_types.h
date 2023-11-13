@@ -1,0 +1,7 @@
+#ifndef RTW_HEADER_massSpringDamper3_types_h_
+#define RTW_HEADER_massSpringDamper3_types_h_
+
+typedef struct P_massSpringDamper3_T_ P_massSpringDamper3_T;
+typedef struct tag_RTM_massSpringDamper3_T RT_MODEL_massSpringDamper3_T;
+
+#endif

@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<fmiModelDescription
+  fmiVersion               = "2.0"
+  modelName                = "CoupledClutches"
+  guid                     = "{e96c29e6-390c-fdc5-914d-108ad6e79096}"
+  description              = "Model CoupledClutches"
+  author                   = ""
+  version                  = ""
+  copyright                = ""
+  license                  = ""
+  generationTool           = "MapleSim (1196527/1196706/1196706)"
+  generationDateAndTime    = "2017-01-19T18:42:35Z"
+  variableNamingConvention = "structured"
+  numberOfEventIndicators  = "25">
+
+  <ModelExchange
+    modelIdentifier               = "CoupledClutches"
+    canGetAndSetFMUstate          = "true"
+    canSerializeFMUstate          = "true"
+    providesDirectionalDerivative = "false">
+  </ModelExchange>
+
+  <UnitDefinitions>
+    <Unit name =  "Hz" />
+    <Unit name =  "rad/s" />
+    <Unit name =  "s" />
+  </UnitDefinitions>
+
+  <DefaultExperiment
+    startTime = "0.00000000000000000e+00"
+    stopTime  = "1.50000000000000000e+00"
+    tolerance = "0.0001"/>
+
+  <ModelVariables>
+    <ScalarVariable
+      name           = "internalTime"
+      valueReference = "0"
+      description    = "internal time"
+      causality      = "independent" >
+      <Real 
+        unit     = "s"/>
+    </ScalarVariable>   <!--index="1" -->
+    <ScalarVariable
+      name           = "CoupledClutches1_T2"
+      valueReference = "66"
+      description    = "T2"
+      causality      = "parameter"
+      variability    = "fixed" >
+      <Real 
+        unit     = "s"
+        start    = "4.00000000000000000e-01"/>
+    </ScalarVariable>   <!--index="2" -->
+    <ScalarVariable
+      name           = "CoupledClutches1_freqHz"
+      valueReference = "67"
+      description    = "freqHz"
+      causality      = "parameter"
+      variability    = "fixed" >
+      <Real 
+        unit     = "Hz"
+        start    = "2.00000000000000000e-01"/>
+    </ScalarVariable>   <!--index="3" -->
+    <ScalarVariable
+      name           = "inputs"
+      valueReference = "27"
+      description    = "RI1"
+      causality      = "input" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="4" -->
+    <ScalarVariable
+      name           = "outputs[1]"
+      valueReference = "2"
+      description    = "J1.w"
+      initial        = "exact"
+      causality      = "output" >
+      <Real 
+        unit     = "rad/s"
+        start    = "1.00000000000000000e+01"/>
+    </ScalarVariable>   <!--index="5" -->
+    <ScalarVariable
+      name           = "outputs[2]"
+      valueReference = "4"
+      description    = "J2.w"
+      initial        = "exact"
+      causality      = "output" >
+      <Real 
+        unit     = "rad/s"
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="6" -->
+    <ScalarVariable
+      name           = "outputs[3]"
+      valueReference = "6"
+      description    = "J3.w"
+      initial        = "exact"
+      causality      = "output" >
+      <Real 
+        unit     = "rad/s"
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="7" -->
+    <ScalarVariable
+      name           = "outputs[4]"
+      valueReference = "8"
+      description    = "J4.w"
+      initial        = "exact"
+      causality      = "output" >
+      <Real 
+        unit     = "rad/s"
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="8" -->
+    <ScalarVariable
+      name           = "J1.phi"
+      valueReference = "1"
+      description    = "J1.phi"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="9" -->
+    <ScalarVariable
+      name           = "J2.phi"
+      valueReference = "3"
+      description    = "J2.phi"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="10" -->
+    <ScalarVariable
+      name           = "J3.phi"
+      valueReference = "5"
+      description    = "J3.phi"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="11" -->
+    <ScalarVariable
+      name           = "J4.phi"
+      valueReference = "7"
+      description    = "J4.phi"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="12" -->
+    <ScalarVariable
+      name           = "dsn_EVAR1"
+      valueReference = "9"
+      description    = "dsn_EVAR1"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="13" -->
+    <ScalarVariable
+      name           = "dsn_EVAR2"
+      valueReference = "10"
+      description    = "dsn_EVAR2"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="14" -->
+    <ScalarVariable
+      name           = "dsn_EVAR3"
+      valueReference = "11"
+      description    = "dsn_EVAR3"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="15" -->
+    <ScalarVariable
+      name           = "dsn_EVAR4"
+      valueReference = "12"
+      description    = "dsn_EVAR4"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="16" -->
+    <ScalarVariable
+      name           = "dsn_EVAR5"
+      valueReference = "13"
+      description    = "dsn_EVAR5"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="17" -->
+    <ScalarVariable
+      name           = "dsn_EVAR6"
+      valueReference = "14"
+      description    = "dsn_EVAR6"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="18" -->
+    <ScalarVariable
+      name           = "dsn_EVAR7"
+      valueReference = "15"
+      description    = "dsn_EVAR7"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="19" -->
+    <ScalarVariable
+      name           = "dsn_EVAR8"
+      valueReference = "16"
+      description    = "dsn_EVAR8"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="20" -->
+    <ScalarVariable
+      name           = "dsn_EVAR9"
+      valueReference = "17"
+      description    = "dsn_EVAR9"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="21" -->
+    <ScalarVariable
+      name           = "dsn_EVAR10"
+      valueReference = "18"
+      description    = "dsn_EVAR10"
+      initial        = "exact" >
+      <Real 
+        start    = "0.00000000000000000e+00"/>
+    </ScalarVariable>   <!--index="22" -->
+    <ScalarVariable
+      name           = "clutch1.sa"
+      valueReference = "19"
+      description    = "clutch1.sa"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="23" -->
+    <ScalarVariable
+      name           = "clutch2.sa"
+      valueReference = "20"
+      description    = "clutch2.sa"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="24" -->
+    <ScalarVariable
+      name           = "clutch2.tau0_max"
+      valueReference = "21"
+      description    = "clutch2.tau0_max"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="25" -->
+    <ScalarVariable
+      name           = "clutch3.sa"
+      valueReference = "22"
+      description    = "clutch3.sa"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="26" -->
+    <ScalarVariable
+      name           = "clutch1.a_relfric"
+      valueReference = "23"
+      description    = "clutch1.a_relfric"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="27" -->
+    <ScalarVariable
+      name           = "clutch2.a_relfric"
+      valueReference = "24"
+      description    = "clutch2.a_relfric"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="28" -->
+    <ScalarVariable
+      name           = "clutch3.a_relfric"
+      valueReference = "25"
+      description    = "clutch3.a_relfric"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="29" -->
+    <ScalarVariable
+      name           = "clutch3.tau"
+      valueReference = "26"
+      description    = "clutch3.tau"
+      initial        = "calculated" >
+      <Real />
+    </ScalarVariable>   <!--index="30" -->
+    <ScalarVariable
+      name           = "clutch1.locked"
+      valueReference = "28"
+      description    = "clutch1.locked"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="31" -->
+    <ScalarVariable
+      name           = "clutch1.mode"
+      valueReference = "29"
+      description    = "clutch1.mode"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="32" -->
+    <ScalarVariable
+      name           = "clutch2.locked"
+      valueReference = "30"
+      description    = "clutch2.locked"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="33" -->
+    <ScalarVariable
+      name           = "clutch2.mode"
+      valueReference = "31"
+      description    = "clutch2.mode"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="34" -->
+    <ScalarVariable
+      name           = "clutch3.locked"
+      valueReference = "32"
+      description    = "clutch3.locked"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="35" -->
+    <ScalarVariable
+      name           = "clutch3.mode"
+      valueReference = "33"
+      description    = "clutch3.mode"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="36" -->
+    <ScalarVariable
+      name           = "clutch1.startBackward"
+      valueReference = "34"
+      description    = "clutch1.startBackward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="37" -->
+    <ScalarVariable
+      name           = "clutch1.startForward"
+      valueReference = "35"
+      description    = "clutch1.startForward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="38" -->
+    <ScalarVariable
+      name           = "clutch2.startBackward"
+      valueReference = "36"
+      description    = "clutch2.startBackward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="39" -->
+    <ScalarVariable
+      name           = "clutch2.startForward"
+      valueReference = "37"
+      description    = "clutch2.startForward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="40" -->
+    <ScalarVariable
+      name           = "clutch3.startBackward"
+      valueReference = "38"
+      description    = "clutch3.startBackward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="41" -->
+    <ScalarVariable
+      name           = "clutch3.startForward"
+      valueReference = "39"
+      description    = "clutch3.startForward"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="42" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_40"
+      valueReference = "40"
+      description    = "_msim_initial"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="43" -->
+    <ScalarVariable
+      name           = "clutch3.free"
+      valueReference = "41"
+      description    = "clutch3.free"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="44" -->
+    <ScalarVariable
+      name           = "clutch1.free"
+      valueReference = "42"
+      description    = "clutch1.free"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="45" -->
+    <ScalarVariable
+      name           = "clutch2.free"
+      valueReference = "43"
+      description    = "clutch2.free"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="46" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_44"
+      valueReference = "44"
+      description    = "msim_RVAR1"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="47" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_45"
+      valueReference = "45"
+      description    = "msim_RVAR2"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="48" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_46"
+      valueReference = "46"
+      description    = "msim_RVAR3"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="49" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_47"
+      valueReference = "47"
+      description    = "msim_RVAR4"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="50" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_48"
+      valueReference = "48"
+      description    = "msim_RVAR5"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="51" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_49"
+      valueReference = "49"
+      description    = "msim_RVAR6"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="52" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_50"
+      valueReference = "50"
+      description    = "msim_RVAR7"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="53" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_51"
+      valueReference = "51"
+      description    = "msim_RVAR8"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="54" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_52"
+      valueReference = "52"
+      description    = "msim_RVAR9"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="55" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_53"
+      valueReference = "53"
+      description    = "msim_RVAR10"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="56" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_54"
+      valueReference = "54"
+      description    = "msim_RVAR11"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="57" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_55"
+      valueReference = "55"
+      description    = "msim_RVAR12"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="58" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_56"
+      valueReference = "56"
+      description    = "msim_RVAR13"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="59" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_57"
+      valueReference = "57"
+      description    = "msim_RVAR14"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="60" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_58"
+      valueReference = "58"
+      description    = "msim_RVAR15"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="61" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_59"
+      valueReference = "59"
+      description    = "msim_RVAR16"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="62" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_60"
+      valueReference = "60"
+      description    = "msim_RVAR17"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="63" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_61"
+      valueReference = "61"
+      description    = "msim_RVAR18"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="64" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_62"
+      valueReference = "62"
+      description    = "msim_RVAR19"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="65" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_63"
+      valueReference = "63"
+      description    = "msim_RVAR20"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="66" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_64"
+      valueReference = "64"
+      description    = "msim_RVAR21"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="67" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_65"
+      valueReference = "65"
+      description    = "msim_RVAR22"
+      variability    = "discrete" >
+      <Real />
+    </ScalarVariable>   <!--index="68" -->
+    <ScalarVariable
+      name           = "J1.phi.der"
+      valueReference = "68"
+      description    = "der(J1.phi)" >
+      <Real 
+        derivative = "9"/>
+    </ScalarVariable>   <!--index="69" -->
+    <ScalarVariable
+      name           = "der(outputs[1])"
+      valueReference = "69"
+      description    = "der(J1.w)" >
+      <Real 
+        derivative = "5"/>
+    </ScalarVariable>   <!--index="70" -->
+    <ScalarVariable
+      name           = "J2.phi.der"
+      valueReference = "70"
+      description    = "der(J2.phi)" >
+      <Real 
+        derivative = "10"/>
+    </ScalarVariable>   <!--index="71" -->
+    <ScalarVariable
+      name           = "der(outputs[2])"
+      valueReference = "71"
+      description    = "der(J2.w)" >
+      <Real 
+        derivative = "6"/>
+    </ScalarVariable>   <!--index="72" -->
+    <ScalarVariable
+      name           = "J3.phi.der"
+      valueReference = "72"
+      description    = "der(J3.phi)" >
+      <Real 
+        derivative = "11"/>
+    </ScalarVariable>   <!--index="73" -->
+    <ScalarVariable
+      name           = "der(outputs[3])"
+      valueReference = "73"
+      description    = "der(J3.w)" >
+      <Real 
+        derivative = "7"/>
+    </ScalarVariable>   <!--index="74" -->
+    <ScalarVariable
+      name           = "J4.phi.der"
+      valueReference = "74"
+      description    = "der(J4.phi)" >
+      <Real 
+        derivative = "12"/>
+    </ScalarVariable>   <!--index="75" -->
+    <ScalarVariable
+      name           = "der(outputs[4])"
+      valueReference = "75"
+      description    = "der(J4.w)" >
+      <Real 
+        derivative = "8"/>
+    </ScalarVariable>   <!--index="76" -->
+    <ScalarVariable
+      name           = "dsn_EVAR1.der"
+      valueReference = "76"
+      description    = "der(dsn_EVAR1)" >
+      <Real 
+        derivative = "13"/>
+    </ScalarVariable>   <!--index="77" -->
+    <ScalarVariable
+      name           = "dsn_EVAR2.der"
+      valueReference = "77"
+      description    = "der(dsn_EVAR2)" >
+      <Real 
+        derivative = "14"/>
+    </ScalarVariable>   <!--index="78" -->
+    <ScalarVariable
+      name           = "dsn_EVAR3.der"
+      valueReference = "78"
+      description    = "der(dsn_EVAR3)" >
+      <Real 
+        derivative = "15"/>
+    </ScalarVariable>   <!--index="79" -->
+    <ScalarVariable
+      name           = "dsn_EVAR4.der"
+      valueReference = "79"
+      description    = "der(dsn_EVAR4)" >
+      <Real 
+        derivative = "16"/>
+    </ScalarVariable>   <!--index="80" -->
+    <ScalarVariable
+      name           = "dsn_EVAR5.der"
+      valueReference = "80"
+      description    = "der(dsn_EVAR5)" >
+      <Real 
+        derivative = "17"/>
+    </ScalarVariable>   <!--index="81" -->
+    <ScalarVariable
+      name           = "dsn_EVAR6.der"
+      valueReference = "81"
+      description    = "der(dsn_EVAR6)" >
+      <Real 
+        derivative = "18"/>
+    </ScalarVariable>   <!--index="82" -->
+    <ScalarVariable
+      name           = "dsn_EVAR7.der"
+      valueReference = "82"
+      description    = "der(dsn_EVAR7)" >
+      <Real 
+        derivative = "19"/>
+    </ScalarVariable>   <!--index="83" -->
+    <ScalarVariable
+      name           = "dsn_EVAR8.der"
+      valueReference = "83"
+      description    = "der(dsn_EVAR8)" >
+      <Real 
+        derivative = "20"/>
+    </ScalarVariable>   <!--index="84" -->
+    <ScalarVariable
+      name           = "dsn_EVAR9.der"
+      valueReference = "84"
+      description    = "der(dsn_EVAR9)" >
+      <Real 
+        derivative = "21"/>
+    </ScalarVariable>   <!--index="85" -->
+    <ScalarVariable
+      name           = "dsn_EVAR10.der"
+      valueReference = "85"
+      description    = "der(dsn_EVAR10)" >
+      <Real 
+        derivative = "22"/>
+    </ScalarVariable>   <!--index="86" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_86"
+      valueReference = "86"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="87" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_87"
+      valueReference = "87"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="88" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_88"
+      valueReference = "88"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="89" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_89"
+      valueReference = "89"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="90" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_90"
+      valueReference = "90"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="91" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_91"
+      valueReference = "91"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="92" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_92"
+      valueReference = "92"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="93" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_93"
+      valueReference = "93"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="94" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_94"
+      valueReference = "94"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="95" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_95"
+      valueReference = "95"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="96" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_96"
+      valueReference = "96"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="97" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_97"
+      valueReference = "97"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="98" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_98"
+      valueReference = "98"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="99" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_99"
+      valueReference = "99"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="100" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_100"
+      valueReference = "100"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="101" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_101"
+      valueReference = "101"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="102" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_102"
+      valueReference = "102"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="103" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_103"
+      valueReference = "103"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="104" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_104"
+      valueReference = "104"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="105" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_105"
+      valueReference = "105"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="106" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_106"
+      valueReference = "106"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="107" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_107"
+      valueReference = "107"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="108" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_108"
+      valueReference = "108"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="109" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_109"
+      valueReference = "109"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="110" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_110"
+      valueReference = "110"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="111" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_111"
+      valueReference = "111"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="112" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_112"
+      valueReference = "112"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="113" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_113"
+      valueReference = "113"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="114" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_114"
+      valueReference = "114"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="115" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_115"
+      valueReference = "115"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="116" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_116"
+      valueReference = "116"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="117" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_117"
+      valueReference = "117"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="118" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_118"
+      valueReference = "118"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="119" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_119"
+      valueReference = "119"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="120" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_120"
+      valueReference = "120"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="121" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_121"
+      valueReference = "121"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="122" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_122"
+      valueReference = "122"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="123" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_123"
+      valueReference = "123"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="124" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_124"
+      valueReference = "124"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="125" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_125"
+      valueReference = "125"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="126" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_126"
+      valueReference = "126"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="127" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_127"
+      valueReference = "127"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="128" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_128"
+      valueReference = "128"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="129" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_129"
+      valueReference = "129"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="130" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_130"
+      valueReference = "130"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="131" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_131"
+      valueReference = "131"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="132" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_132"
+      valueReference = "132"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="133" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_133"
+      valueReference = "133"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="134" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_134"
+      valueReference = "134"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="135" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_135"
+      valueReference = "135"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="136" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_136"
+      valueReference = "136"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="137" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_137"
+      valueReference = "137"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="138" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_138"
+      valueReference = "138"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="139" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_139"
+      valueReference = "139"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="140" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_140"
+      valueReference = "140"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="141" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_141"
+      valueReference = "141"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="142" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_142"
+      valueReference = "142"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="143" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_143"
+      valueReference = "143"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="144" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_144"
+      valueReference = "144"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="145" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_145"
+      valueReference = "145"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="146" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_146"
+      valueReference = "146"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="147" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_147"
+      valueReference = "147"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="148" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_148"
+      valueReference = "148"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="149" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_149"
+      valueReference = "149"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="150" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_150"
+      valueReference = "150"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="151" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_151"
+      valueReference = "151"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="152" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_152"
+      valueReference = "152"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="153" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_153"
+      valueReference = "153"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="154" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_154"
+      valueReference = "154"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="155" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_155"
+      valueReference = "155"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="156" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_156"
+      valueReference = "156"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="157" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_157"
+      valueReference = "157"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="158" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_158"
+      valueReference = "158"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="159" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_159"
+      valueReference = "159"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="160" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_160"
+      valueReference = "160"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="161" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_161"
+      valueReference = "161"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="162" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_162"
+      valueReference = "162"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="163" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_163"
+      valueReference = "163"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="164" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_164"
+      valueReference = "164"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="165" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_165"
+      valueReference = "165"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="166" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_166"
+      valueReference = "166"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="167" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_167"
+      valueReference = "167"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="168" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_168"
+      valueReference = "168"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="169" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_169"
+      valueReference = "169"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="170" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_170"
+      valueReference = "170"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="171" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_171"
+      valueReference = "171"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="172" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_172"
+      valueReference = "172"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="173" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_173"
+      valueReference = "173"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="174" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_174"
+      valueReference = "174"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="175" -->
+    <ScalarVariable
+      name           = "CoupledClutches_r_175"
+      valueReference = "175"
+      description    = "internal variable" >
+      <Real />
+    </ScalarVariable>   <!--index="176" -->
+    <ScalarVariable
+      name           = "minsamplestep"
+      valueReference = "176"
+      description    = "Minimum time step between samples in binary data file"
+      causality      = "parameter"
+      variability    = "fixed" >
+      <Real 
+        unit     = "s"
+        start    = "2.50000000000000000e-02"/>
+    </ScalarVariable>   <!--index="177" -->
+    <ScalarVariable
+      name           = "binfilename"
+      valueReference = "177"
+      description    = "Name of binary data file"
+      causality      = "parameter"
+      variability    = "fixed" >
+      <String 
+        start    = "DISABLED"/>
+    </ScalarVariable>   <!--index="178" -->
+  </ModelVariables>
+
+  <ModelStructure>
+    <Outputs>
+      <Unknown index = "5" dependencies = "" />
+      <Unknown index = "6" dependencies = "" />
+      <Unknown index = "7" dependencies = "" />
+      <Unknown index = "8" dependencies = "" />
+    </Outputs>
+    <Derivatives>
+      <Unknown index = "69" dependencies = "5" />
+      <Unknown index = "70" dependencies = "" />
+      <Unknown index = "71" dependencies = "6" />
+      <Unknown index = "72" dependencies = "" />
+      <Unknown index = "73" dependencies = "7" />
+      <Unknown index = "74" dependencies = "" />
+      <Unknown index = "75" dependencies = "8" />
+      <Unknown index = "76" dependencies = "" />
+      <Unknown index = "77" dependencies = "" />
+      <Unknown index = "78" dependencies = "" />
+      <Unknown index = "79" dependencies = "" />
+      <Unknown index = "80" dependencies = "" />
+      <Unknown index = "81" dependencies = "" />
+      <Unknown index = "82" dependencies = "" />
+      <Unknown index = "83" dependencies = "" />
+      <Unknown index = "84" dependencies = "" />
+      <Unknown index = "85" dependencies = "" />
+      <Unknown index = "86" dependencies = "" />
+    </Derivatives>
+    <InitialUnknowns>
+      <Unknown index = "5" dependencies = "" />
+      <Unknown index = "6" dependencies = "" />
+      <Unknown index = "7" dependencies = "" />
+      <Unknown index = "8" dependencies = "" />
+      <Unknown index = "69" dependencies = "5" />
+      <Unknown index = "70" dependencies = "" />
+      <Unknown index = "71" dependencies = "6" />
+      <Unknown index = "72" dependencies = "" />
+      <Unknown index = "73" dependencies = "7" />
+      <Unknown index = "74" dependencies = "" />
+      <Unknown index = "75" dependencies = "8" />
+      <Unknown index = "76" dependencies = "" />
+    </InitialUnknowns>
+  </ModelStructure>
+
+</fmiModelDescription>
