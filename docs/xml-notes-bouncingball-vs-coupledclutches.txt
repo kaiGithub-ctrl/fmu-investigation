@@ -1,0 +1,2 @@
+-output: bouncing ball output is h, height of the ball. Does not have 'causality = output', but instead 'causality = local'. The output of the coupled clutches are labled with 'causality = output'. Will this cause problems when bouncing ball is used?
+-input: coupled clutches input has the label 'inputs' and 'causality = input', while bouncing ball has no inputs, has parameter e and others are local fixed variables.

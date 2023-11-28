@@ -1,0 +1,7 @@
+#ifndef RTW_HEADER_MSD_11_21_23_types_h_
+#define RTW_HEADER_MSD_11_21_23_types_h_
+
+typedef struct P_MSD_11_21_23_T_ P_MSD_11_21_23_T;
+typedef struct tag_RTM_MSD_11_21_23_T RT_MODEL_MSD_11_21_23_T;
+
+#endif
