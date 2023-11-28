@@ -30,10 +30,6 @@ def simulate_custom_input(show_plot=True):
     for variable in model_description.modelVariables:
         vrs[variable.name] = variable.valueReference
 
-    # get the value references for the variables we want to get/set
-    vr_inputs   = vrs['Inputs']      # normalized force on the 3rd clutch
-    vr_outputs4 = vrs['Output']  # angular velocity of the 4th inertia
-
     # extract the FMU
     unzipdir = extract(fmu_filename)
 
@@ -59,7 +55,10 @@ def simulate_custom_input(show_plot=True):
         # value references as arguments and return lists of values
 
         # set the input
-        fmu.setReal([vr_inputs], [0.0 if time < 10 else 1.0])
+        fmu.setReal([vrs['Inputs'] ], [0.0 if time < 10 else 1.0])
+        fmu.setReal([vrs['b']], [1 if time > 0 else 0])
+        fmu.setReal([vrs['k']], [0.5])
+        fmu.setReal([vrs['m']], [2])
 
         # perform one step
         fmu.doStep(currentCommunicationPoint=time, communicationStepSize=step_size)
@@ -68,7 +67,7 @@ def simulate_custom_input(show_plot=True):
         time += step_size
 
         # get the values for 'inputs' and 'outputs[4]'
-        inputs, outputs4 = fmu.getReal([vr_inputs, vr_outputs4])
+        inputs, outputs4 = fmu.getReal([vrs['Inputs'] , vrs['Output'] ])
 
         # append the results
         rows.append((time, inputs, outputs4))
