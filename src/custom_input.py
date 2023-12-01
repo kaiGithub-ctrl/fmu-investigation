@@ -12,12 +12,12 @@ def simulate_custom_input(show_plot=True):
 
     # define the model name and simulation parameters
     # fmu_filename = 'CoupledClutches.fmu'
-    fmu_filename = 'MSD.fmu'
+    fmu_filename = 'two_MSD_system.fmu'
 
     start_time = 0.0
-    threshold = 20.0
-    stop_time = 20.0
-    step_size = 0.2
+    threshold = 2000
+    stop_time = 300
+    step_size = 6
 
     # download the FMU
     # download_test_file('2.0', 'CoSimulation', 'MapleSim', '2016.2', 'CoupledClutches', fmu_filename)
@@ -55,10 +55,14 @@ def simulate_custom_input(show_plot=True):
         # value references as arguments and return lists of values
 
         # set the input
-        fmu.setReal([vrs['Inputs'] ], [0.0 if time < 10 else 1.0])
-        fmu.setReal([vrs['b']], [1 if time > 0 else 0])
-        fmu.setReal([vrs['k']], [0.5])
-        fmu.setReal([vrs['m']], [2])
+        fmu.setReal([vrs['Input'] ], [0.0 if time < 1 else 1.0])
+        fmu.setReal([vrs['b1']], [1])
+        fmu.setReal([vrs['k1']], [0.5])
+        fmu.setReal([vrs['m1']], [10])
+        fmu.setReal([vrs['b2']], [1])
+        fmu.setReal([vrs['k2']], [0.5])
+        fmu.setReal([vrs['m2']], [10])
+
 
         # perform one step
         fmu.doStep(currentCommunicationPoint=time, communicationStepSize=step_size)
@@ -67,14 +71,17 @@ def simulate_custom_input(show_plot=True):
         time += step_size
 
         # get the values for 'inputs' and 'outputs[4]'
-        inputs, outputs4 = fmu.getReal([vrs['Inputs'] , vrs['Output'] ])
+        inputs, outputs1, outputs2, outputs3, outputs4 = fmu.getReal([vrs['Input'] , vrs['Output'], vrs['Output1'], vrs['Output2'], vrs['Output3']])
 
         # append the results
-        rows.append((time, inputs, outputs4))
+        rows.append((time, inputs, outputs1,outputs2, outputs3, outputs4))
 
         # use the threshold to terminate the simulation
-        if outputs4 > threshold:
-            print("Threshold reached at t = %g s" % time)
+        if outputs1 > threshold:
+            print("x1 Threshold reached at t = %g s" % time)
+            break
+        if outputs2 > threshold:
+            print("x2 Threshold reached at t = %g s" % time)
             break
 
     fmu.terminate()
@@ -84,7 +91,7 @@ def simulate_custom_input(show_plot=True):
     shutil.rmtree(unzipdir, ignore_errors=True)
 
     # convert the results to a structured NumPy array
-    result = np.array(rows, dtype=np.dtype([('time', np.float64), ('inputs', np.float64), ('outputs', np.float64)]))
+    result = np.array(rows, dtype=np.dtype([('time', np.float64), ('inputs', np.float64), ('x1', np.float64), ('x2', np.float64),('v1', np.float64),('v2', np.float64)]))
 
     # plot the results
     if show_plot:
