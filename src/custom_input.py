@@ -11,16 +11,12 @@ import shutil
 def simulate_custom_input(show_plot=True):
 
     # define the model name and simulation parameters
-    # fmu_filename = 'CoupledClutches.fmu'
     fmu_filename = 'two_MSD_system.fmu'
 
     start_time = 0.0
     threshold = 2000
     stop_time = 300
     step_size = 6
-
-    # download the FMU
-    # download_test_file('2.0', 'CoSimulation', 'MapleSim', '2016.2', 'CoupledClutches', fmu_filename)
 
     # read the model description
     model_description = read_model_description(fmu_filename)
@@ -55,11 +51,11 @@ def simulate_custom_input(show_plot=True):
         # value references as arguments and return lists of values
 
         # set the input
-        fmu.setReal([vrs['Input'] ], [0.0 if time < 1 else 1.0])
-        fmu.setReal([vrs['b1']], [1])
-        fmu.setReal([vrs['k1']], [0.5])
-        fmu.setReal([vrs['m1']], [10])
-        fmu.setReal([vrs['b2']], [1])
+        fmu.setReal([vrs['Input'] ], [0.0 if time < 100 else 1.0])
+        fmu.setReal([vrs['b1']], [5])
+        fmu.setReal([vrs['k1']], [1])
+        fmu.setReal([vrs['m1']], [25])
+        fmu.setReal([vrs['b2']], [0.5])
         fmu.setReal([vrs['k2']], [0.5])
         fmu.setReal([vrs['m2']], [10])
 
@@ -91,7 +87,7 @@ def simulate_custom_input(show_plot=True):
     shutil.rmtree(unzipdir, ignore_errors=True)
 
     # convert the results to a structured NumPy array
-    result = np.array(rows, dtype=np.dtype([('time', np.float64), ('inputs', np.float64), ('x1', np.float64), ('x2', np.float64),('v1', np.float64),('v2', np.float64)]))
+    result = np.array(rows, dtype=np.dtype([('time', np.float64), ('Input Force', np.float64), ('x1', np.float64), ('x2', np.float64),('v1', np.float64),('v2', np.float64)]))
 
     # plot the results
     if show_plot:
