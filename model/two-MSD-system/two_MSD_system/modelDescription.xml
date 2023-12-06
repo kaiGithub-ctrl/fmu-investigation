@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2023-12-01T04:28:16Z" generationTool="Simulink (R2023a)" guid="{35d8a516-3c83-eda0-bdb7-f55c57945ab1}" modelName="two_MSD_system" numberOfEventIndicators="0" variableNamingConvention="structured" version="1.4">
+<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2023-12-05T18:40:22Z" generationTool="Simulink (R2023a)" guid="{5cb70e5a-41b2-605c-961e-e885210b7a2b}" modelName="two_MSD_system" numberOfEventIndicators="0" variableNamingConvention="structured" version="1.4">
   <CoSimulation canBeInstantiatedOnlyOncePerProcess="true" canHandleVariableCommunicationStepSize="false" canNotUseMemoryManagementFunctions="true" modelIdentifier="two_MSD_system">
     <SourceFiles>
       <File name="two_MSD_system.c"/>
@@ -14,33 +14,33 @@
       <Simulink>
         <ImportCompatibility requireMATLABOnPath="no" requireRelease="all"/>
         <SimulinkModelInterface>
-          <Inport blockPath="two_MSD_system/Input" dataType="double" dimension="[1]" portName="Input" portNumber="1" sampleTime="[0 0]" uniquePortName="Input" unit=""/>
-          <Outport blockPath="two_MSD_system/Output" dataType="double" dimension="[1]" portName="Output" portNumber="1" sampleTime="[0 0]" uniquePortName="Output" unit=""/>
-          <Outport blockPath="two_MSD_system/Output1" dataType="double" dimension="[1]" portName="Output1" portNumber="2" sampleTime="[0 0]" uniquePortName="Output1" unit=""/>
-          <Outport blockPath="two_MSD_system/Output2" dataType="double" dimension="[1]" portName="Output2" portNumber="3" sampleTime="[0 0]" uniquePortName="Output2" unit=""/>
-          <Outport blockPath="two_MSD_system/Output3" dataType="double" dimension="[1]" portName="Output3" portNumber="4" sampleTime="[0 0]" uniquePortName="Output3" unit=""/>
+          <Inport blockPath="two_MSD_system/Input" dataType="double" dimension="[1]" portName="Input" portNumber="1" sampleTime="[0 0]" uniquePortName="Input_Force" unit=""/>
+          <Outport blockPath="two_MSD_system/Output" dataType="double" dimension="[1]" portName="Output" portNumber="1" sampleTime="[0 0]" uniquePortName="Position_1" unit=""/>
+          <Outport blockPath="two_MSD_system/Output1" dataType="double" dimension="[1]" portName="Output1" portNumber="2" sampleTime="[0 0]" uniquePortName="Position_2" unit=""/>
+          <Outport blockPath="two_MSD_system/Output2" dataType="double" dimension="[1]" portName="Output2" portNumber="3" sampleTime="[0 0]" uniquePortName="Velocity_1" unit=""/>
+          <Outport blockPath="two_MSD_system/Output3" dataType="double" dimension="[1]" portName="Output3" portNumber="4" sampleTime="[0 0]" uniquePortName="Velocity_2" unit=""/>
         </SimulinkModelInterface>
       </Simulink>
     </Tool>
   </VendorAnnotations>
   <ModelVariables>
-    <ScalarVariable causality="input" description="Input" name="Input" valueReference="0" variability="continuous">
+    <ScalarVariable causality="input" description="Input" name="Input_Force" valueReference="0" variability="continuous">
       <Real start="0"/>
       <!--Index = 1-->
     </ScalarVariable>
-    <ScalarVariable causality="output" description="Output" initial="calculated" name="Output" valueReference="1" variability="continuous">
+    <ScalarVariable causality="output" description="Output" initial="calculated" name="Position_1" valueReference="1" variability="continuous">
       <Real/>
       <!--Index = 2-->
     </ScalarVariable>
-    <ScalarVariable causality="output" description="Output1" initial="calculated" name="Output1" valueReference="2" variability="continuous">
+    <ScalarVariable causality="output" description="Output1" initial="calculated" name="Position_2" valueReference="2" variability="continuous">
       <Real/>
       <!--Index = 3-->
     </ScalarVariable>
-    <ScalarVariable causality="output" description="Output2" initial="calculated" name="Output2" valueReference="3" variability="continuous">
+    <ScalarVariable causality="output" description="Output2" initial="calculated" name="Velocity_1" valueReference="3" variability="continuous">
       <Real/>
       <!--Index = 4-->
     </ScalarVariable>
-    <ScalarVariable causality="output" description="Output3" initial="calculated" name="Output3" valueReference="4" variability="continuous">
+    <ScalarVariable causality="output" description="Output3" initial="calculated" name="Velocity_2" valueReference="4" variability="continuous">
       <Real/>
       <!--Index = 5-->
     </ScalarVariable>
@@ -49,27 +49,27 @@
       <!--Index = 6-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="b1" initial="exact" name="b1" valueReference="6" variability="tunable">
-      <Real start="2"/>
+      <Real start="1"/>
       <!--Index = 7-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="b2" initial="exact" name="b2" valueReference="7" variability="tunable">
-      <Real start="1.5"/>
+      <Real start="1"/>
       <!--Index = 8-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="k1" initial="exact" name="k1" valueReference="8" variability="tunable">
-      <Real start="2.4"/>
+      <Real start="1"/>
       <!--Index = 9-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="k2" initial="exact" name="k2" valueReference="9" variability="tunable">
-      <Real start="1.3"/>
+      <Real start="1"/>
       <!--Index = 10-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="m1" initial="exact" name="m1" valueReference="10" variability="tunable">
-      <Real start="20"/>
+      <Real start="1"/>
       <!--Index = 11-->
     </ScalarVariable>
     <ScalarVariable causality="parameter" description="m2" initial="exact" name="m2" valueReference="11" variability="tunable">
-      <Real start="10"/>
+      <Real start="1"/>
       <!--Index = 12-->
     </ScalarVariable>
   </ModelVariables>

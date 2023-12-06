@@ -172,9 +172,9 @@ fmi2Component fmi2Instantiate(fmi2String instanceName, fmi2Type fmuType, fmi2Str
         functions->logger(functions->componentEnvironment, instanceName, fmi2Error, "error",
                 "fmi2Instantiate: Missing GUID.");
         return NULL;
-    } else if (strcmp(fmuGUID, "{35d8a516-3c83-eda0-bdb7-f55c57945ab1}")) {
+    } else if (strcmp(fmuGUID, "{5cb70e5a-41b2-605c-961e-e885210b7a2b}")) {
         functions->logger(functions->componentEnvironment, instanceName, fmi2Error, "error",
-                "fmi2Instantiate: Wrong GUID %s. Expected %s.", fmuGUID, "{35d8a516-3c83-eda0-bdb7-f55c57945ab1}");
+                "fmi2Instantiate: Wrong GUID %s. Expected %s.", fmuGUID, "{5cb70e5a-41b2-605c-961e-e885210b7a2b}");
         return NULL;
     }
     _instance = modelData = (FMUModelData*)calloc(1, sizeof(FMUModelData));
