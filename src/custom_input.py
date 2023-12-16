@@ -16,7 +16,7 @@ def simulate_custom_input(show_plot=True):
 
     start_time = 0.0
     threshold = 10000
-    stop_time = 1200
+    stop_time = 300
     step_size = 6
 
     # download the FMU
@@ -57,11 +57,11 @@ def simulate_custom_input(show_plot=True):
         # set the input
         fmu.setReal([vrs['Input_Force'] ], [0.0 if time < 10 or time > 15 else 1.0])
         fmu.setReal([vrs['b1']], [1])
-        fmu.setReal([vrs['k1']], [6 if time > 120 else 0.8])
-        fmu.setReal([vrs['m1']], [50])
-        fmu.setReal([vrs['b2']], [6 if time > 120 else 0.8])
+        fmu.setReal([vrs['k1']], [6])
+        fmu.setReal([vrs['m1']], [50 if time < 75 else 10000])
+        fmu.setReal([vrs['b2']], [6])
         fmu.setReal([vrs['k2']], [2])
-        fmu.setReal([vrs['m2']], [50])
+        fmu.setReal([vrs['m2']], [50 if time < 75 else 10000])
         
 
         # perform one step

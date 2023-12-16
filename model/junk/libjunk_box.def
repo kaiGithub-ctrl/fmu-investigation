@@ -1,0 +1,6 @@
+LIBRARY    libjunk_box.dll
+EXPORTS
+	junk_box
+	no_ccode
+	junk_box_actuator
+	junk_box_sensor

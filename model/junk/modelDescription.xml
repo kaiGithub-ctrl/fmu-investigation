@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<fmiModelDescription fmiVersion="1.0" modelName="cosim_fmu_test" modelIdentifier="cosim_fmu_test" guid="{1fd0349f:18c6644da19:-7f4a}" description="empty" author="Kai" version="1.0" generationTool="scilab-2024.0.0" generationDateAndTime="2023-12-13T23:12:27.784Z" variableNamingConvention="flat" numberOfContinuousStates="1" numberOfEventIndicators="0">
+  <DefaultExperiment startTime="0.0"> </DefaultExperiment>
+  <ModelVariables> <ScalarVariable name="st_integral_func_5_0" valueReference="0" variability="continuous" causality="internal"><Real start="0" fixed="true"/></ScalarVariable><ScalarVariable name="der(st_integral_func_5_0)" valueReference="1" variability="continuous" causality="internal"><Real/></ScalarVariable><ScalarVariable name="input_1_0" valueReference="0" variability="parameter" causality="internal"><Integer start="1" fixed="true"/></ScalarVariable><ScalarVariable name="output_2_1" valueReference="1" variability="parameter" causality="internal"><Integer start="1" fixed="true"/></ScalarVariable><ScalarVariable name="multiplex_4_2" valueReference="2" variability="parameter" causality="internal"><Integer start="2" fixed="true"/></ScalarVariable><ScalarVariable name="output_6_3" valueReference="3" variability="parameter" causality="internal"><Integer start="2" fixed="true"/></ScalarVariable></ModelVariables>
+  <Implementation>
+    <CoSimulation_StandAlone>
+      <Capabilities canHandleVariableCommunicationStepSize="true" canHandleEvents="true"> </Capabilities>
+    </CoSimulation_StandAlone>
+  </Implementation>
+</fmiModelDescription>
